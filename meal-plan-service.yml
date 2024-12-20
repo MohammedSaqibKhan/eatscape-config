@@ -1,0 +1,41 @@
+# MySQL Database Configuration
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  application:
+    name: ${SPRING_APPLICATION_NAME}
+
+# Server Configuration
+server:
+  port: ${SERVER_PORT}
+
+# Recipe Service URL
+recipe:
+  service:
+    url: ${RECIPE_SERVICE_URL}
+
+# Feign Client Configuration
+feign:
+  hystrix:
+    enabled: ${FEIGN_HYSTRIX_ENABLED}
+
+# Logging level configuration
+logging:
+  level:
+    org.springframework: ${LOGGING_LEVEL_ORG_SPRINGFRAMEWORK}
+    com.mohammedsaqibkhan: ${LOGGING_LEVEL_COM_MOHAMMEDSAQIBKHAN}
+    com.mohammedsaqibkhan.mealplanservice.service.MealServiceClient: ${LOGGING_LEVEL_COM_MOHAMMEDSAQIBKHAN_MEALPLAN_SERVICE_SERVICE_MEAL_SERVICE_CLIENT}
+    feign.client: ${LOGGING_LEVEL_FEIGN_CLIENT}
+    org.springframework.web: ${LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB}
