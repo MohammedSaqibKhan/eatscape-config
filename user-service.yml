@@ -31,6 +31,11 @@ spring:
           writetimeout: ${EMAIL_SMTP_WRITETIMEOUT}
 
 
+# Server Configuration
+server:
+  port: ${SERVER_PORT}
+
+
 eureka:
   client:
     service-url:
