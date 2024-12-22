@@ -30,11 +30,6 @@ spring:
           timeout: ${EMAIL_SMTP_TIMEOUT}
           writetimeout: ${EMAIL_SMTP_WRITETIMEOUT}
 
-logging:
-  level:
-    root: DEBUG
-    org.springframework: DEBUG
-
 
 eureka:
   client:
