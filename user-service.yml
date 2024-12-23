@@ -44,10 +44,19 @@ eureka:
 
 resilience4j:
   circuitbreaker:
-    configs:
-      default:
-        slidingWindowSize: 5
+    instances:
+      userService:
+        slidingWindowSize: 10
         failureRateThreshold: 50
-  instances:
-    userService:
-      baseConfig: default
+        waitDurationInOpenState: 10s
+        minimumNumberOfCalls: 5
+  retry:
+    instances:
+      userService:
+        maxAttempts: 3
+        waitDuration: 500ms
+  ratelimiter:
+    instances:
+      userService:
+        limitForPeriod: 10
+        limitRefreshPeriod: 1s
