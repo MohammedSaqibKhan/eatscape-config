@@ -30,23 +30,19 @@ spring:
           timeout: ${EMAIL_SMTP_TIMEOUT}
           writetimeout: ${EMAIL_SMTP_WRITETIMEOUT}
 
-
 # Server Configuration
 server:
   port: ${SERVER_PORT}
-
+  servlet:
+    context-path: /user-service  # Set the context path to match the Gateway path.
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
-
 springdoc:
   api-docs:
-    path: user-service/v3/api-docs
+    path: /v3/api-docs  # Correct relative path for API docs.
   swagger-ui:
-    path: user-service/swagger-ui/index.html
-
-
-
+    path: /swagger-ui/index.html  # Correct relative path for Swagger UI.
