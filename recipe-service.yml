@@ -18,7 +18,7 @@ spring:
 
 # Server Configuration
 server:
-  port: 8090
+  port: ${SERVER_PORT}
 
 # Enable Feign Client for communication with other services
 feign:
