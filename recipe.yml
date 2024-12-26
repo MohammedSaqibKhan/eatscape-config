@@ -1,0 +1,47 @@
+# MySQL Database Configuration
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+# Server Configuration
+server:
+  port: 8090
+
+# Service Name
+spring:
+  application:
+    name: recipe-service
+
+# Enable Feign Client for communication with other services
+feign:
+  hystrix:
+    enabled: ${FEIGN_HYSTRIX_ENABLED}
+
+# API URLs and Keys
+nutrition:
+  service:
+    url: ${NUTRITION_SERVICE_URL}
+
+# Logging Configuration
+logging:
+  level:
+    org:
+      springframework: info
+    com:
+      mohammedsaqibkhan: info
+    feign:
+      client: DEBUG
+    org:
+      springframework:
+        web: info
