@@ -6,7 +6,7 @@ spring:
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
 
-# JPA / Hibernate Configurations
+  # JPA / Hibernate Configurations
   jpa:
     hibernate:
       ddl-auto: update
@@ -15,13 +15,13 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
+  # Application Name
+  application:
+    name: ${SERVICE_NAME}
+
 # Server Configuration
 server:
   port: ${SERVER_PORT}
-
-spring:
-  application:
-    name: ${SERVICE_NAME}
 
 # Logging Configuration
 logging:
@@ -32,9 +32,8 @@ logging:
       mohammedsaqibkhan: ${LOGGING_LEVEL_CUSTOM_PACKAGE}
     feign:
       client: ${LOGGING_LEVEL_FEIGN_CLIENT}
-    org:
-      springframework:
-        web: ${LOGGING_LEVEL_SPRING_WEB}
+    springframework:
+      web: ${LOGGING_LEVEL_SPRING_WEB}
 
 # API Keys
 nutritionix:
