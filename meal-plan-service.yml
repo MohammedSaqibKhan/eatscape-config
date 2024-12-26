@@ -39,3 +39,7 @@ logging:
     com.mohammedsaqibkhan.mealplanservice.service.MealServiceClient: ${LOGGING_LEVEL_COM_MOHAMMEDSAQIBKHAN_MEALPLAN_SERVICE_SERVICE_MEAL_SERVICE_CLIENT}
     feign.client: ${LOGGING_LEVEL_FEIGN_CLIENT}
     org.springframework.web: ${LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB}
+
+
+
+    
