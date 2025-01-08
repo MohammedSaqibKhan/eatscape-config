@@ -50,6 +50,7 @@ eureka:
 
 logging:
   level:
+    root: DEBUG
     org.apache.kafka: DEBUG
     org.springframework.kafka: DEBUG
 
