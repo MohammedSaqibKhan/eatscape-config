@@ -46,8 +46,11 @@ eureka:
 
 logging:
   level:
-    org.springframework.kafka: DEBUG
-    org.apache.kafka: DEBUG
+    org:
+      springframework:
+        kafka: DEBUG
+      apache:
+        kafka: DEBUG
     
 
 
